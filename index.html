@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<!-- head -->
+<head>
+<title>Computer Network Lab</title>
+</head>
+<!-- body -->
+
+<style>
+    body {
+    background-image: url('minecraft_cherry_blossom_trees_by_tsushimasdestiny_dfz9rzd.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    }
+    </style>
+
+<body style="background-color:rgb(153, 241, 201);">
+
+
+<div style="text-align:center"> 
+<h1 style="color:red; size:;">Computer Network lab</h1><br>
+<h2 style="color:rgb(13, 0, 255);">StudentID 1: Phan Duy Cuong<br>Class:LA1.302 </h2>
+<h2 style="color: rgb(0, 131, 13);">StudentID 2:Vo Hoang Nam <br>Class:LA1.302 </h2><br>
+</div>
+
+<div style="text-align:center"> 
+    <button onclick="playPause()">Play/Pause</button> 
+    <button onclick="makeBig()">Big</button>
+    <button onclick="makeSmall()">Small</button>
+    <button onclick="makeNormal()">Normal</button>
+    <br><br>
+    <video id="video1" width="208">
+      <source src="received_1542470569468684.mp4" type="video/mp4">
+      <source src="mov_bbb.ogg" type="video/ogg">
+      Your browser does not support HTML video.
+    </video>
+  </div> 
+  
+  <script> 
+  var myVideo = document.getElementById("video1"); 
+  
+  function playPause() { 
+    if (myVideo.paused) 
+      myVideo.play(); 
+    else 
+      myVideo.pause(); 
+  } 
+  
+  function makeBig() { 
+      myVideo.width = 360; 
+  } 
+  
+  function makeSmall() { 
+      myVideo.width = 160; 
+  } 
+  
+  function makeNormal() { 
+      myVideo.width = 208; 
+  } 
+  </script> 
+<div style="text-align:center"> 
+<a href="https://www.w3schools.com"><button onclick="document.location='default.asp'" title="nothing fun here">Tutorial</button></a><br>
+</div>
+
+<img src="FB_IMG_1563635671013.jpg" alt="Tutorial" style="height: 15%; width: 15%;"></a>
+
+<img src="FB_IMG_1649036994013.jpg" alt="test" style="width:15%; height:15%;"><br>
+
+
+</body>
+</html>
