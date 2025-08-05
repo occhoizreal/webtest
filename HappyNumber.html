@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Testing</h1>
+        <input type="number" id="numcheck" v-model.number="number" placeholder="Enter a number" min="1">
+        <button @click="checkNumber">Check Happy Number</button>
+        <p>Check number: {{number}}</p>
+        <p v-if="result != null">{{number}} is {{result ? "" : "not"}} a happy number</p>
+    </div>
+</body>
+<script>
+    const {createApp, ref} = Vue
+    
+    createApp({
+        setup(){
+            const number = ref(null)
+            const result = ref(null)
+            function sumOfSquares(n){
+                let sum = 0;
+                while(n != 0){
+                    let digit = n%10
+                    sum += digit * digit
+                    n = Math.floor(n/10)
+                }
+                return sum
+            }
+            function isHappyNumber(n){
+                let seen = new Set();
+                while(true){
+                    n = sumOfSquares(n);
+                    if(n == 1) return true
+                    if(seen.has(n)) return false;
+                    seen.add(n);
+                }
+            }
+            function checkNumber(){
+                if(number.value !== null && number.value > 0){
+                    result.value = isHappyNumber(number.value)
+
+                }
+                else{
+                    result.value = null
+                }
+            }
+            return{
+                number,
+                result,
+                isHappyNumber,
+                checkNumber
+            }
+        }
+    }).mount('#app')
+</script>
+</html>

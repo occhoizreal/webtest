@@ -1,0 +1,84 @@
+.home {
+  overflow-x: hidden;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+}
+
+.hero-buttons .btn {
+  min-width: 150px;
+}
+
+.feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+.feature-icon i {
+  font-size: 3rem;
+}
+
+.stats-section {
+  background-color: #f8f9fa;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.testimonial-card {
+  transition: transform 0.3s ease;
+  background: #fff;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+}
+
+.stars i {
+  font-size: 1.2rem;
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #212529 0%, #495057 100%);
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+  
+  .feature-icon i {
+    font-size: 2.5rem;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

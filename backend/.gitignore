@@ -1,0 +1,18 @@
+
+
+
+*.json
+*.csproj.user
+*-[0-9a-f]*  # Matches GUID-style filenames
+
+.vs
+# Add backend-specific ignore
+/.vs/backend
+/backend/.vs/
+/backend/*.db
+/backend/*.db-shm
+/backend/*.db-wal
+/backend/*.cache.JSON
+*.db
+CopilotIndices/
+
