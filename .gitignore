@@ -62,7 +62,8 @@ frontend/build/
 frontend/node_modules/
 *.tsbuildinfo
 
-# Package manager lock files (optional - you might want to commit these)
+# Package manager lock files (you should commit these for reproducible builds)
+# Uncommenting these lines will ignore lock files - usually you want to commit them
 # package-lock.json
 # yarn.lock
 # pnpm-lock.yaml

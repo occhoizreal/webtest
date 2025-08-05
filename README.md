@@ -20,7 +20,7 @@ This project is configured to automatically deploy the frontend to GitHub Pages 
 2. **The deployment workflow will automatically:**
    - Build the Vue.js frontend
    - Deploy it to GitHub Pages
-   - Make it available at `https://[username].github.io/ChatPlay/`
+   - Make it available at `https://[username].github.io/webtest/`
 
 ### Manual Deployment
 

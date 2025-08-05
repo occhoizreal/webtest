@@ -37,10 +37,6 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v4
         with:
-          # Automatically inject basePath in your Next.js configuration file and disable
-          # server side image optimization (https://nextjs.org/docs/api-reference/next/image#unoptimized).
-          #
-          # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: other
           
       - name: Install dependencies
@@ -49,7 +45,12 @@ jobs:
         
       - name: Build project
         working-directory: ./frontend
-        run: npm run build
+        run: |
+          npm run build
+          # Copy root index.html if it exists and is meant for GitHub Pages
+          if [ -f "../index.html" ] && [ ! -f "dist/index.html" ]; then
+            cp ../index.html dist/
+          fi
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

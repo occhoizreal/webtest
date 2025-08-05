@@ -20,5 +20,5 @@ export default defineConfig({
     port: 5173,         // ← optional, but makes it explicit
   },
   // Set base path for GitHub Pages deployment
-  base: process.env.NODE_ENV === 'production' ? '/ChatPlay/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/webtest/' : '/',
 })
